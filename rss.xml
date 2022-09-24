@@ -1,4 +1,155 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Sep 2022 02:51:37 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Sep 2022 05:47:05 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
 &lt;p&gt;ありがたいことに技育展2022に登壇させていただけたので、その記念ということで感想などを報告していきたいと思います。&lt;br&gt;
-技育展とは、ちょっと大きめ(多分)のハッカソンで、最近少しずつ応募者が増えているらしい（？）
-実は技育展の登壇が決まって開発を進める中で得た学びがあまりに大きく、アウトプットの場としてブログサイトを解説したという経緯もあります。&lt;/p&gt;</content:encoded></item></channel></rss>
+技育展とは、自分が開発したものを発表して他の登壇者と競う展示会で、最近少しずつ応募者が増えているらしい（？）&lt;br&gt;
+しかし、私は開発済みの作品などは持ち合わせていないためゼロからの開発。ほとんどハッカソンのようなモチベーションで参加しました。&lt;br&gt;
+実は、技育展の登壇が決まって開発を進める中で得た学びがあまりに大きく、アウトプットの場としてブログサイトを解説したという経緯もあります。&lt;/p&gt;
+&lt;p&gt;追記：2022/09/23の結果発表にて、「&lt;strong&gt;優秀賞&lt;/strong&gt;」をいただくことができました！！最優秀賞には届かなかったものの、自分たちの成果が認められた感じがして嬉しいです！&lt;/p&gt;
+&lt;h2&gt;成果物その他&lt;/h2&gt;
+&lt;p&gt;感想の前に、成果物などをのリンクを貼っておきます！&lt;br&gt;
+正直かなりの力作なので、使ってもらえると嬉しいです！&lt;br&gt;
+&lt;a href=&quot;https://github.com/Al-Mikan/contore&quot;&gt;githubリポジトリ&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://github.com/Al-Mikan/contore/releases&quot;&gt;ダウンロードページ&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;&quot;&gt;動画リンク&lt;/a&gt;　準備中&lt;/p&gt;
+&lt;h2&gt;出場した経緯&lt;/h2&gt;
+&lt;p&gt;今年の4月くらいまでは、本を読んだりネットで調べたりして何かを作るということはしていたものの、チーム開発をしたり、作品を人前に出すという経験は全くありませんでした。&lt;br&gt;
+そんな時に自分の所属しているサークル内限定のハッカソンが開催され、興味本位で参加したところ(チームメンバーのおかげで)優勝してしまい、それに味を占めて外部のハッカソンにもエントリーをするに至りました。&lt;br&gt;
+それから当然ではありますが、個人で開発をしているよりも効率的に成長できるからという理由もありました。特に、チーム内に自分よりもできる人がいると、分からない箇所は相談しながら開発を進めることができるのも大きなメリットだと思っています。&lt;br&gt;
+何はともあれ、ざっと表すと「強くなりたいけど特に目標もないし、試しに出てみるかあ」くらいのノリです。&lt;/p&gt;
+&lt;h2&gt;感想&lt;/h2&gt;
+&lt;h3&gt;チーム結成時&lt;/h3&gt;
+&lt;p&gt;私の所属しているサークルでは8人の参加希望者がいたため、4人ずつ2チームに分けての参加となる。
+チーム編成としては、「部長」・「副部長」・「後輩」・私という構成で、こう役職だけ見ると、なんかすごいチームだなあと感じる。(でも、役職なくても強い人はいっぱいいる)&lt;br&gt;
+私以外の3人のうち、2人とは以前チームを組んだことがあり、心持ちはだいぶ楽。&lt;/p&gt;
+&lt;h3&gt;応募フォーム作成（アイデア出し）&lt;/h3&gt;
+&lt;p&gt;どうやら最近エントリーが増えているらしい技育展。登壇者を絞るためにエントリーの段階でプロダクトの概要・アイデアなどを提出し、どのチームを登壇させるかの審査が行われるシステムのよう。&lt;br&gt;
+意気揚々とチームを組んだはいいものの、ここで落ちると開発すらできずに解散となる。やばい。&lt;br&gt;
+数週間に渡ってdiscordのボイチャに集まり、アイデア出しを行った。&lt;br&gt;
+やるからには優勝が欲しい。勝てるアイデアを探そうと必死。&lt;br&gt;
+決定したかに思えたアイデア（今後使うかもしれないので書かないでおく）も、これじゃ勝てないと判断して練り直し。&lt;/p&gt;
+&lt;p&gt;そんな時に出た、「たまごっちみたいなのを作りたい」・「姿勢等を矯正して快適なエンジニア生活」というアイデアを掛け合わせた、「開発 x たまごっち」が刺さり、決定した。&lt;br&gt;
+これでプロダクトのコンセプトは、「作業でたまごっちを育てる。作業中は、姿勢などのアドバイスを受けることができる」となった。プロダクト名は「こんとれ！！」である。&lt;br&gt;
+もちろん「たまごっち」はあくまでもイメージであり、実際にたまごっちのキャラクターを使ったりはしていない。&lt;/p&gt;
+&lt;h3&gt;登壇確定時&lt;/h3&gt;
+&lt;p&gt;応募フォームの締め切りからしばらくすると、代表者にメールで結果が通知される。&lt;br&gt;
+正直アイデア段階で手応えはあったものの、全く不安がないわけではない。&lt;/p&gt;
+&lt;p&gt;チームメンバーから転送されてきたメールには、「合格」の文字。&lt;br&gt;
+セーフ！これで開発できる！!&lt;br&gt;
+「喜びというより安堵しかない」ってセリフを聞くたび、何カッコつけてんだって思ってたけど、こういう時に使うんですね（本当か？）&lt;/p&gt;
+&lt;p&gt;さて、無事登壇が確定すると、大量のアメニティが送られてきた。&lt;br&gt;
+外部のイベントが初めての私にとって、この量は衝撃である。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 300px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/37dd4c75f027aaf5801b3651fdf58bb0/5a46d/goods.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.24324324324323%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFRElEQVQ4yyXDe1DThwHA8d/d7rY/tqvXXrveatd2zPro1XqtSi2+KIoIWqCtAhYrkBjCIxICSYTUJEADBgyxoEBAXgoWNw2JEF4mEAIkGEmJgkGCQunV0q1d1/2x/f3ddfvcfYTITRHs37qBPW/+maZaA1/dHcPjtBPwjlBYkMOutzeiz9pDjTQa6QeRyCUZyMQZVGjU+L2jTE868Xl+6fpf4U8vrGPzi8+yc8N6dr8ZQZ1Rh6O3i5vdFtQqJSeTDlGXvQ9D2jZS4qKJe/8QG//wItknU7g/M4HXM/L/406m3HcQdmx+hdee+x2vP/9bXnnm1yTH7aelwYS5poIrjfV0tVioLUihMvMg4uNJZKWnE7PrXUpVCrxuB75feoaYcg/jHRtB2PjyC6x/fh3P/eZXHI2JwmjQYjZquVwlp+OimmtXWlEf24U8fhN7t21l++YtvP16BJ8VSWhprKW1qY7RwZvMTI3gHRtEePX363hnSwSJh9/HoFPT2VCJ69YlFv19zI224+yqoCzlNVSHn+VY1HpefmYd+96K4O6Xucz1a7C362j44jzXO1twD9kQUpMOcz9wj2DAT8A7QXh2mm+/ecLa3/5OKDhFb5MOg6KI7FQJVVoT70ZmE703C52qhKI8Bc1VxQR6NTRf1POF6TzCWYWMn3/6ke+frvLPfzzl65XHLIUXWF0J82RpnqZGG/L8JpITy5DktXLwUBkHYks5nqohNj6fzKxSHjq0PLytottiQKg1GvjXT2vMz4Ww2f3c7vPjdgdYXAix9t0yotMXiIyUcdF0jS3b8jglNqM+24A014A0R8/RpDO0m9R841QStJUg3LjWwejYIpaWSe7encPtnqXXNs3EZJD//HuNKmM7ERtOUa5r5kCCEnlRPZ+XtSLNq6JIaSIuIRtJZg7zdiXzNgWC+mw3aZkj9PT4+fmHr5mYCOJy3cPpCuCdDnG5sZ/1f0xl0xsZxMQriE1QkPaJhvSTGo4m55N6QoFEqmO4o5TwgApBJP4r5jofT1cfs7y0xKPQI1aWFwkvPaZ/eIF6yyTv7JTw0qvH2X2wgOg4GQeOyEhIlvNxqoocaTmlpQ101JtYsMkRysuGOVcxjWMwxNra9yyvrHK9Z5y2Ngd+1w2umKuJ2S8iaueHxEbFkCtVciQuhdjoZBLj0/n0RCHZEj0FMh2+v5QiSHJ7SU1rpOmCmQlrDQOtSrqMInqqT2GtTsTVLmHapudOcwYp+95Ak5+E7JPdKHNFiNJSqD4rYrxLwWiHggf2EoSqwuP01aUzWHeMsTYxvr7LLMzcYd4/xtDVc/T13uTJUoAZmxpR/HYkH21G8tFWiqUZqGV56OSZhB0KVp1qwg4lQut5MaHbRXg6svF0ncHvcRK8v0LAfw9nt4ZBazvzMw6CfWoyDkcR/94OPtizi8T9e4ndsY2E97Yz3CxlbVJPeKgEwVSlZ+yqnJmeXHzXz+Bz9WO3e5ka9+C4omDWKsN3XcpEhxiT/AjFJ6LR5yRReDKOUwlRZCbFoc76kHm7im/HyxBMxs+xmPVMdcvxf5nPwj0X0y47UwPdjHZ9xmSHmK+sxfi6cgjeLOD+rXzmes8wbyskNKjFby3BfVVO2KHmztUShPraSsw1lVyu0TJkyWPWWkKwv4zxNjEuy6dMdkqZtRbzwK4maC1icVjLk9EKHt4uYqFfxZqvmu+8Rm7U5WMsL0WwXDJxqbaKWmMl1RXnaL8gY6xTxkSnlNFmEZ620/h7ZDx0aAgNaHg0UMKyq5zwsJYHtwrpbziNQZ2JVl2I+bye/wINg+CSAd9qgwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;アメニティの写真&quot;
+        title=&quot;アメニティの写真&quot;
+        src=&quot;/static/37dd4c75f027aaf5801b3651fdf58bb0/5a46d/goods.png&quot;
+        srcset=&quot;/static/37dd4c75f027aaf5801b3651fdf58bb0/12f09/goods.png 148w,
+/static/37dd4c75f027aaf5801b3651fdf58bb0/e4a3f/goods.png 295w,
+/static/37dd4c75f027aaf5801b3651fdf58bb0/5a46d/goods.png 300w&quot;
+        sizes=&quot;(max-width: 300px) 100vw, 300px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;開発期間&lt;/h3&gt;
+&lt;p&gt;技育展は展示会なので、「絶対に新しいものを開発しないといけない」などの決まりはないが、我々はあくまでも「ハッカソン」として参加しているためゼロから作る必要がある。&lt;br&gt;
+要件定義・技術選定・開発・デバック……やることは無限にある。&lt;br&gt;
+どこまで間に合うかは分からない。
+とりあえず、「こんとれ！！」に必要な機能を洗い出し、技術選定を行なっていく。&lt;br&gt;
+最低限必要な機能は、こんな感じになった。（一部抜粋）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-md&quot;&gt;- キャラ関係
+    - 画面左下にいる
+    - 成長過程は？
+        - 卵 → 赤ちゃん → 子供 → 大人 ？
+- ショップ
+    - 経験値
+    - (ここで食料を買う)
+- 作業機能
+    - 作業開始
+        - モーダル画面
+    - 作業終了
+        - 結果通知モーダル
+        - 作業データを保存する、
+    - 作業中
+        - 経験値を溜める
+        - 姿勢などの検知
+        - 集中力がないか、眠たいか、猫背かなど判定して酷かったら通知
+        - 画面のどこかで待機 (非表示可能)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;これを達成するための技術選定は、最終的にはこうなった。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fd7b722734c57eb899d8d87380deffee/b0f48/tools.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.37837837837838%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+klEQVQoz22TPY/TQBCG/S/4BUiUFPwBREGDRAM1FRUFFNdQIyQKKBEdJVdRUYCUgpPQCRHESSeQUMgRfyQ5f9u5xHac2N4H7WzMAWKk0YxnvO/OzDtrMZmgPA81m6GmU5jNRJXjILnp9HdOrOuauLa7f+nzto2lfB8RpcR0bYt4yyUqCMRXXSd5pXW7NQCbzfk5HdduFGGRJCRZRuD7BEGA6zgsiwLqGpUk9NJp0B2AXLS7WHQHSJ5jEcekec7EnjD1PJI0ZbFaoTToYoEfhnweDjk6+sJgMGBTVRBFqKYREH2R7kAAswxLxZGpoKpNsDWVqLKkDUP0V5okuI5HURR0TUN7eiqA/4rSgJzlKC9F7e2zffqWdm8fDkas1wVL26FpO+4/fMTl67d59fqNHCzGY77FKe/GNic/Jxx/H+H5gXRkkSaodQM/fPg4gsMRar5gvTxDz3d8YnPp6k0uXLnGrbsPBLC0bap6w2JdU5Qlq7Kk0iTpGXahaTlr4fEw48CvzQjKEtJU/GcvXnLjzj3eH34yrenNaNv/t9zuAL/OCy4+Oeb5B7NGbVGi4vic5a2ZmbCrWdak9Kv0FymRAaw7GKUbsronpUJvgDDZg5r9kQp7kD9VAHFds29ZhiaIPJPSmc/Na0kSyYvqEYQhSr8UbbNMYr3F8/gFxOE89UplepMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;技術構成図&quot;
+        title=&quot;技術構成図&quot;
+        src=&quot;/static/fd7b722734c57eb899d8d87380deffee/fcda8/tools.png&quot;
+        srcset=&quot;/static/fd7b722734c57eb899d8d87380deffee/12f09/tools.png 148w,
+/static/fd7b722734c57eb899d8d87380deffee/e4a3f/tools.png 295w,
+/static/fd7b722734c57eb899d8d87380deffee/fcda8/tools.png 590w,
+/static/fd7b722734c57eb899d8d87380deffee/efc66/tools.png 885w,
+/static/fd7b722734c57eb899d8d87380deffee/c83ae/tools.png 1180w,
+/static/fd7b722734c57eb899d8d87380deffee/b0f48/tools.png 2690w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;私が主に担当したのは、上記の機能のうち「姿勢などの検知」部分。機械学習を使って骨格を検知して、スコアへの換算が必要になる。その他、発表前日はUI/ロジック部分もお手伝い程度に頑張った。&lt;br&gt;
+本当はプロセス間通信を使って機械学習の部分をpythonに投げる予定だった。だから開発期間の前半はそこで格闘してたんだけど、途中で「機械学習部分もtypescriptでいけね？」ってことに気がついて、急遽路線変更。私の二週間は無駄になった。プロセス間通信の話も今度書きたい。&lt;/p&gt;
+&lt;h3&gt;発表前日〜当日&lt;/h3&gt;
+&lt;p&gt;本当にやばい。全然終わってない。&lt;br&gt;
+ハッカソン恒例。「前日の徹夜開発」の幕開けである。&lt;br&gt;
+お家をレンタルできるサービス「エアビー」をギリギリで取って、メンバー全員で泊まり込む。&lt;br&gt;
+交代で一人ずつ、一時間ほど仮眠をとりながら、全力で開発を進める。&lt;br&gt;
+しんどかった。&lt;br&gt;
+でもちょっと楽しかった。&lt;br&gt;
+頑張った。&lt;br&gt;
+多分この1ヶ月の合計よりも多く作業した気がする。&lt;br&gt;
+夜食に食べたセブンのラーメンサラダは今までで一番美味しかった。&lt;br&gt;
+夜食を食べて、monsterを飲みながらチェックアウトギリギリまで粘って、リリース目前。
+一度帰ってシャワーを浴びる。&lt;br&gt;
+発表は15:30から。今は10時。&lt;br&gt;
+ここからデバックとリリース。発表の準備。&lt;br&gt;
+1時間程度で再び集合して、追い込みをかける。もう場所がなくなってしまったので、今度はメンバーの家だ。&lt;/p&gt;
+&lt;p&gt;発表者は私。人前で話すことが苦手なので、克服しようと名乗り出てしまったのだ。&lt;br&gt;
+この1ヶ月の成果全てがかかる発表。名乗り出てしまったことをずっと後悔していた。
+…………まあ、やってしまえば大したことはないというのは世の常であって。&lt;br&gt;
+無事発表まで終えることができました。
+えらい！　頑張った！&lt;/p&gt;
+&lt;p&gt;達成感に浸りながら入る(ほぼ)徹夜明けのベッドは最高でした。&lt;/p&gt;
+&lt;h2&gt;終わりに&lt;/h2&gt;
+&lt;p&gt;自分的には割と頑張った1ヶ月だったんじゃないかと思っています。&lt;br&gt;
+他の登壇者のレベルも高く、そんな人たちと競うことができて面白かったし、やはり実際にプロダクトを作ることによって得られる学びは大きい！&lt;br&gt;
+技育展含めて今後、勉強したこと・理解したことがあれば記事にしていきたいと思います。&lt;/p&gt;</content:encoded></item></channel></rss>
