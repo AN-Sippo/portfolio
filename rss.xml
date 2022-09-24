@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Sep 2022 05:47:05 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Sep 2022 12:39:55 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
 &lt;p&gt;ありがたいことに技育展2022に登壇させていただけたので、その記念ということで感想などを報告していきたいと思います。&lt;br&gt;
 技育展とは、自分が開発したものを発表して他の登壇者と競う展示会で、最近少しずつ応募者が増えているらしい（？）&lt;br&gt;
 しかし、私は開発済みの作品などは持ち合わせていないためゼロからの開発。ほとんどハッカソンのようなモチベーションで参加しました。&lt;br&gt;
 実は、技育展の登壇が決まって開発を進める中で得た学びがあまりに大きく、アウトプットの場としてブログサイトを解説したという経緯もあります。&lt;/p&gt;
-&lt;p&gt;追記：2022/09/23の結果発表にて、「&lt;strong&gt;優秀賞&lt;/strong&gt;」をいただくことができました！！最優秀賞には届かなかったものの、自分たちの成果が認められた感じがして嬉しいです！&lt;/p&gt;
+&lt;p&gt;追記：2022/09/23の結果発表にて、「&lt;strong&gt;優秀賞&lt;/strong&gt;」をいただくことができました！！最優秀賞には届かなかったものの、自分たちの成果が認められた実感が湧いて嬉しいです！&lt;/p&gt;
 &lt;h2&gt;成果物その他&lt;/h2&gt;
 &lt;p&gt;感想の前に、成果物などをのリンクを貼っておきます！&lt;br&gt;
-正直かなりの力作なので、使ってもらえると嬉しいです！&lt;br&gt;
+正直かなりの力作なのでぜひ！
 &lt;a href=&quot;https://github.com/Al-Mikan/contore&quot;&gt;githubリポジトリ&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;https://github.com/Al-Mikan/contore/releases&quot;&gt;ダウンロードページ&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;&quot;&gt;動画リンク&lt;/a&gt;　準備中&lt;/p&gt;
