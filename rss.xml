@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Sep 2022 12:41:30 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Sep 2022 12:42:11 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
 &lt;p&gt;ありがたいことに技育展2022に登壇させていただけたので、その記念ということで感想などを報告していきたいと思います。&lt;br&gt;
 技育展とは、自分が開発したものを発表して他の登壇者と競う展示会で、最近少しずつ応募者が増えているらしい（？）&lt;br&gt;
 しかし、私は開発済みの作品などは持ち合わせていないためゼロからの開発。ほとんどハッカソンのようなモチベーションで参加しました。&lt;br&gt;
@@ -16,11 +16,11 @@
 それから当然ではありますが、個人で開発をしているよりも効率的に成長できるからという理由もありました。特に、チーム内に自分よりもできる人がいると、分からない箇所は相談しながら開発を進めることができるのも大きなメリットだと思っています。&lt;br&gt;
 ざっくり言えば、「強くなりたいけど特に目標もないし、試しに出てみるかあ」くらいのノリです。&lt;/p&gt;
 &lt;h2&gt;感想&lt;/h2&gt;
-&lt;h3&gt;チーム結成時&lt;/h3&gt;
+&lt;h4&gt;チーム結成時&lt;/h4&gt;
 &lt;p&gt;私の所属しているサークルでは8人の参加希望者がいたため、4人ずつ2チームに分けての参加となる。
 チーム編成としては、「部長」・「副部長」・「後輩」・私という構成で、こう役職だけ見ると、なんかすごいチームだなあと感じる。(でも、役職なくても強い人はいっぱいいる)&lt;br&gt;
 私以外の3人のうち、2人とは以前チームを組んだことがあり、心持ちはだいぶ楽。&lt;/p&gt;
-&lt;h3&gt;応募フォーム作成（アイデア出し）&lt;/h3&gt;
+&lt;h4&gt;応募フォーム作成（アイデア出し）&lt;/h4&gt;
 &lt;p&gt;どうやら最近エントリーが増えているらしい技育展。登壇者を絞るためにエントリーの段階でプロダクトの概要・アイデアなどを提出し、どのチームを登壇させるかの審査が行われるシステムのよう。&lt;br&gt;
 意気揚々とチームを組んだはいいものの、ここで落ちると開発すらできずに解散となる。やばい。&lt;br&gt;
 数週間に渡ってdiscordのボイチャに集まり、アイデア出しを行った。&lt;br&gt;
@@ -29,7 +29,7 @@
 &lt;p&gt;そんな時に出た、「たまごっちみたいなのを作りたい」・「姿勢等を矯正して快適なエンジニア生活」というアイデアを掛け合わせた、「開発 x たまごっち」が刺さり、決定した。&lt;br&gt;
 これでプロダクトのコンセプトは、「作業でたまごっちを育てる。作業中は、姿勢などのアドバイスを受けることができる」となった。プロダクト名は「こんとれ！！」である。&lt;br&gt;
 もちろん「たまごっち」はあくまでもイメージであり、実際にたまごっちのキャラクターを使ったりはしていない。&lt;/p&gt;
-&lt;h3&gt;登壇確定時&lt;/h3&gt;
+&lt;h4&gt;登壇確定時&lt;/h4&gt;
 &lt;p&gt;応募フォームの締め切りからしばらくすると、代表者にメールで結果が通知される。&lt;br&gt;
 正直アイデア段階で手応えはあったものの、全く不安がないわけではない。&lt;/p&gt;
 &lt;p&gt;チームメンバーから転送されてきたメールには、「合格」の文字。&lt;br&gt;
@@ -67,7 +67,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;開発期間&lt;/h3&gt;
+&lt;h4&gt;開発期間&lt;/h4&gt;
 &lt;p&gt;技育展は展示会なので、「絶対に新しいものを開発しないといけない」などの決まりはないが、我々はあくまでも「ハッカソン」として参加しているためゼロから作る必要がある。&lt;br&gt;
 要件定義・技術選定・開発・デバック……やることは無限にある。&lt;br&gt;
 どこまで間に合うかは分からない。
@@ -128,7 +128,7 @@
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;私が主に担当したのは、上記の機能のうち「姿勢などの検知」部分。機械学習を使って骨格を検知して、スコアへの換算が必要になる。その他、発表前日はUI/ロジック部分もお手伝い程度に頑張った。&lt;br&gt;
 本当はプロセス間通信を使って機械学習の部分をpythonに投げる予定だった。だから開発期間の前半はそこで格闘してたんだけど、途中で「機械学習部分もtypescriptでいけね？」ってことに気がついて、急遽路線変更。私の二週間は無駄になった。プロセス間通信の話も今度書きたい。&lt;/p&gt;
-&lt;h3&gt;発表前日〜当日&lt;/h3&gt;
+&lt;h4&gt;発表前日〜当日&lt;/h4&gt;
 &lt;p&gt;本当にやばい。全然終わってない。&lt;br&gt;
 ハッカソン恒例。「前日の徹夜開発」の幕開けである。&lt;br&gt;
 お家をレンタルできるサービス「エアビー」をギリギリで取って、メンバー全員で泊まり込む。&lt;br&gt;
