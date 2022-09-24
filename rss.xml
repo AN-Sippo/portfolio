@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Sep 2022 12:39:55 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Sep 2022 12:41:30 GMT</lastBuildDate><item><title><![CDATA[2022技育展に登壇した話]]></title><description><![CDATA[初めに ありがたいことに技育展202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/giikuten2022/</guid><pubDate>Fri, 16 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
 &lt;p&gt;ありがたいことに技育展2022に登壇させていただけたので、その記念ということで感想などを報告していきたいと思います。&lt;br&gt;
 技育展とは、自分が開発したものを発表して他の登壇者と競う展示会で、最近少しずつ応募者が増えているらしい（？）&lt;br&gt;
 しかし、私は開発済みの作品などは持ち合わせていないためゼロからの開発。ほとんどハッカソンのようなモチベーションで参加しました。&lt;br&gt;
@@ -14,7 +14,7 @@
 &lt;p&gt;今年の4月くらいまでは、本を読んだりネットで調べたりして何かを作るということはしていたものの、チーム開発をしたり、作品を人前に出すという経験は全くありませんでした。&lt;br&gt;
 そんな時に自分の所属しているサークル内限定のハッカソンが開催され、興味本位で参加したところ(チームメンバーのおかげで)優勝してしまい、それに味を占めて外部のハッカソンにもエントリーをするに至りました。&lt;br&gt;
 それから当然ではありますが、個人で開発をしているよりも効率的に成長できるからという理由もありました。特に、チーム内に自分よりもできる人がいると、分からない箇所は相談しながら開発を進めることができるのも大きなメリットだと思っています。&lt;br&gt;
-何はともあれ、ざっと表すと「強くなりたいけど特に目標もないし、試しに出てみるかあ」くらいのノリです。&lt;/p&gt;
+ざっくり言えば、「強くなりたいけど特に目標もないし、試しに出てみるかあ」くらいのノリです。&lt;/p&gt;
 &lt;h2&gt;感想&lt;/h2&gt;
 &lt;h3&gt;チーム結成時&lt;/h3&gt;
 &lt;p&gt;私の所属しているサークルでは8人の参加希望者がいたため、4人ずつ2チームに分けての参加となる。
