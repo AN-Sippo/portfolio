@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Nov 2022 10:41:18 GMT</lastBuildDate><item><title><![CDATA[JPHacks2022でHUAWEI賞を受賞した話]]></title><description><![CDATA[初めに 今回、ありがたいことにJPHacks202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Nov 2022 10:43:25 GMT</lastBuildDate><item><title><![CDATA[JPHacks2022でHUAWEI賞を受賞した話]]></title><description><![CDATA[初めに 今回、ありがたいことにJPHacks202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
 &lt;p&gt;今回、ありがたいことにJPHacks2022にて本選に出場させていただけたので、その感想を残しておきたいと思います。&lt;br&gt;
 前回の技育展とは違うメンバーですが、再び同じサークルでチームを結成して出場しました。&lt;br&gt;
 (本当は技術ブログのつもりで開設したのに、アウトプット苦手すぎて体験談しか書けてない……。)&lt;br&gt;
 追記：途中から文章を書くことに飽きてきてかなりぐちゃぐちゃです。読んでくださってる方、ごめんなさい。&lt;/p&gt;
 &lt;h4&gt;JPHacksってなに？&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://jphacks.com&quot;&gt;JPHacks公式サイト&lt;/a&gt;
-とりあえず公式のサイトをそのまま貼っておきますが、要するにハッカソンです。&lt;br&gt;
+&lt;p&gt;とりあえず&lt;a href=&quot;https://jphacks.com&quot;&gt;JPHacks公式サイト&lt;/a&gt;をそのまま貼っておきますが、要するにハッカソンです。&lt;br&gt;
 でも本選はオフラインつまり現地で行われるので、うまくアピールできればスポンサー企業さんとのコネができる！……かもしれないわけです。&lt;/p&gt;
 &lt;h2&gt;プロダクト&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/jphacks/A_2209&quot;&gt;Github&lt;/a&gt;&lt;br&gt;
