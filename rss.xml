@@ -1,4 +1,377 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Nov 2022 10:51:02 GMT</lastBuildDate><item><title><![CDATA[JPHacks2022でHUAWEI賞を受賞した話]]></title><description><![CDATA[初めに 今回、ありがたいことにJPHacks202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</guid><pubDate>Tue, 15 Nov 2022 13:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Dec 2022 11:15:25 GMT</lastBuildDate><item><title><![CDATA[viewport、お前誰や]]></title><description><![CDATA[初めに お久しぶりです。技術ブログのつもりなのに、今まで技育展・JPHacks…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/what_is_viewport/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/what_is_viewport/</guid><pubDate>Wed, 23 Nov 2022 13:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
+&lt;p&gt;お久しぶりです。技術ブログのつもりなのに、今まで技育展・JPHacksと経験談のような記事しか書いてきませんでした。&lt;br&gt;
+今回はようやく技術のお話です。&lt;br&gt;
+同じ内容を&lt;a href=&quot;https://qiita.com/advent-calendar/2022/huit&quot;&gt;サークルのアドベントカレンダー&lt;/a&gt;にも書いているので、そちらも興味があればあぜひ。&lt;/p&gt;
+&lt;h2&gt;何をしたの？&lt;/h2&gt;
+&lt;p&gt;この記事を書くに至った経緯としては、受注していたweb制作のバイトでcssのメディアクエリを使ってレスポンシブ対応をしなくてはならなかったのですが、その時に&lt;code&gt;&amp;#x3C;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;/code&gt;を書かないとモバイル用のページが表示されないという現象にぶち当たりました。&lt;br&gt;
+まあ、よく考えたら当たり前のことだった(最後に一応書いておく)のですが、せっかくなので色々調べてみました。&lt;br&gt;
+この記事に概要として、以下に今回僕が何をしたのかを記しておきます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MDNに助けを求めた&lt;/li&gt;
+&lt;li&gt;htmlの仕様書を見に行った&lt;/li&gt;
+&lt;li&gt;cssの仕様書を見に行った&lt;/li&gt;
+&lt;li&gt;Chromiumのソースコードを解説してもらった&lt;/li&gt;
+&lt;li&gt;実験して確かめた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;viewportとは(今知ってること &amp;#x26;&amp;#x26; MDNで調べたこと)&lt;/h2&gt;
+&lt;p&gt;解説に入る前に一応確認しておきましょう。&lt;br&gt;
+&lt;a href=&quot;https://developer.mozilla.org/ja/docs/Web/HTML/Viewport_meta_tag&quot;&gt;MDN&lt;/a&gt;によると、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ブラウザーのビューポートは、ウェブコンテンツを見ることができるウィンドウの領域です。これはレンダリングされたページと同じサイズではないことが多く、その場合、ブラウザーはユーザーがスクロールしてすべてのコンテンツにアクセスできるよう、スクロールバーを提供します。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;モバイル端末やその他の狭い画面では、通常画面よりも広い仮想ウィンドウまたはビューポートでページをレンダリングし、レンダリング結果を縮小して、すべてを一度に見ることができるようにするものがあります。ユーザーは、パンやズーム操作によって、ページのさまざまな領域を見ることができます。例えば、モバイル画面の幅が 640px の場合、ページは 980px の仮想ビューポートでレンダリングされ、 640px の空間に収まるように縮小されるかもしれません。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(MDNより)&lt;/p&gt;
+&lt;p&gt;僕の理解としては、&lt;br&gt;
+「『ピクセル』と一口に言ってもcssで&lt;code&gt;width=&quot;100px&quot;&lt;/code&gt;って書くのと、物理的に存在する、ディスプレイを構成する単位の『ハード的なピクセル』って違うよね？&lt;br&gt;
+でも、それをいちいち考えるのって大変だから、一旦&lt;strong&gt;仮想的に&lt;/strong&gt;&lt;code&gt;viewport&lt;/code&gt;ってものを定義して、その中でレイアウトを考えよう。&lt;/p&gt;
+&lt;p&gt;ってものだと思ってます。&lt;/p&gt;
+&lt;h2&gt;htmlの仕様書を見に行く&lt;/h2&gt;
+&lt;p&gt;参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://momdo.github.io/html/&quot;&gt;htmlの仕様書（日本語訳）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://html.spec.whatwg.org/multipage/&quot;&gt;原文&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;僕は英語を読む気力はなかったので日本語訳を読みましたが、より正確な情報を求める方は原文の方を読みに行くことを強くお勧めします。
+仕様書によると、metaタグの&lt;code&gt;name&lt;/code&gt;属性に指定することのできる「標準メタデータ名」には、以下のものがあるらしいです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;application-name&lt;/li&gt;
+&lt;li&gt;author&lt;/li&gt;
+&lt;li&gt;description&lt;/li&gt;
+&lt;li&gt;generator&lt;/li&gt;
+&lt;li&gt;keywords&lt;/li&gt;
+&lt;li&gt;referer&lt;/li&gt;
+&lt;li&gt;theme-color&lt;/li&gt;
+&lt;li&gt;color-scheme&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;・・・おや？&lt;br&gt;
+お気づきでしょうか。そう、viewportくんがいませんね。&lt;/p&gt;
+&lt;p&gt;仕様書には「標準メタデータ名」以外に「&lt;code&gt;他のメタデータ名&lt;/code&gt;」という項目があり、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;誰でも自由にWHATWG Wiki MetaExtensions pageを編集して、いつでもメタデータ名を追加できる。新しいメタデータ名は、次の情報とともに指定することができる&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とのことです。&lt;br&gt;
+つまり、viewportは「どこかが作った」metaタグの拡張ってことで、&lt;br&gt;
+「他のメタデータ名」は重複不可で、一覧は&lt;a href=&quot;https://wiki.whatwg.org/wiki/MetaExtensions&quot;&gt;ここ&lt;/a&gt;を参照するらしい。&lt;br&gt;
+見に行くと、(リンクはもう切れてましたが)cssの定義に飛ばすような言及が見つかったので、cssの仕様書を見に行くことにする。&lt;/p&gt;
+&lt;h2&gt;cssの仕様書を見に行く　　&lt;/h2&gt;
+&lt;p&gt;残念ながら、W3Cのcss仕様書には日本語訳がありません。仕方ないので、原文を読みに行きます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/css-device-adapt-1/#at-ruledef-viewport&quot;&gt;cssの仕様書&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;お、ありましたね。viewport。&lt;br&gt;
+というわけで、viewportは「css(というと語弊があるが)が作ったmetaタグの拡張」ということが判明しました。&lt;/p&gt;
+&lt;p&gt;仕様書では、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;meta&gt;タグの内容は初めに、ブラウザによって&lt;code&gt;@viewport&lt;/code&gt;に解釈される。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;と明言されており、「ほー、本当にcssが担当なんだな」と実感しました。&lt;/p&gt;
+&lt;p&gt;せっかくなので、少し中身を見てみることにする。&lt;/p&gt;
+&lt;p&gt;metaタグのviewportに認識されるプロパティは以下の6つ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;width&lt;/li&gt;
+&lt;li&gt;height&lt;/li&gt;
+&lt;li&gt;initial-scale&lt;/li&gt;
+&lt;li&gt;minimum-scale&lt;/li&gt;
+&lt;li&gt;maximum-scale&lt;/li&gt;
+&lt;li&gt;user-scaleble&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これら以外のプロパティは無視され、特にエラーを吐いたり、変な挙動を示すというわけではないようです。&lt;/p&gt;
+&lt;h2&gt;やってみる……の前に(Chromiumのソースコードを解説してもらった)&lt;/h2&gt;
+&lt;p&gt;私も今回知らなくて検証の際にめちゃくちゃ混乱したのですが、知り合いのつよつよエンジニア様によると、&lt;br&gt;
+viewportは少なくともChroniumにおいてはモバイルにおいてのみ有効みたいです。
+その根拠が&lt;a href=&quot;https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/inspector/dev_tools_emulator.cc;l=227?q=setviewportenabled&amp;#x26;ss=chromium%2Fchromium%2Fsrc:third_party%2Fblink%2F&quot;&gt;Chroniumのソースコード&lt;/a&gt;になるのですが、それは別途記事を書いてくれているので、そちらを参照してください。&lt;/p&gt;
+&lt;p&gt;軽くだけ書いておくと、&lt;br&gt;
+ソースコード(コピペ)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void DevToolsEmulator::SetViewportEnabled(bool enabled) {
+  embedder_viewport_enabled_ = enabled;
+  bool emulate_mobile_enabled =
+      device_metrics_enabled_ &amp;#x26;&amp;#x26; emulate_mobile_enabled_;
+  if (!emulate_mobile_enabled) {
+    web_view_-&gt;GetPage()-&gt;GetSettings().SetViewportEnabled(enabled);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;はっきりと見つけたわけではないですが、こんな処理を書いている以上、さすがに違いはあるのでしょう。&lt;br&gt;
+なので、検証する際にはdevtoolでモバイルモードに切り替えておく必要があります。&lt;/p&gt;
+&lt;h2&gt;やってみる1&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;viewport&lt;/code&gt;が物理的なピクセル数を無視して、仮想的にピクセル数を設定してくれるなら、次のコードはページを横方向に4分割してくれるはず！！&lt;br&gt;
+ならないよって人はdevtoolでエミュレータが起動してるかに注意！！(僕はこれで何度も混乱しました) .&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;#x3C;!DOCTYPE html&gt;
+&amp;#x3C;html&gt;
+
+    &amp;#x3C;head&gt;
+        &amp;#x3C;meta name=&quot;viewport&quot; content=&quot;width=100&quot;/&gt;
+    &amp;#x3C;/head&gt;
+    
+    &amp;#x3C;body&gt;
+         &amp;#x3C;div id=&quot;one&quot;&gt;&amp;#x3C;/div&gt;&amp;#x3C;div id=&quot;two&quot;&gt;&amp;#x3C;/div&gt;&amp;#x3C;div id=&quot;three&quot;&gt;&amp;#x3C;/div&gt;&amp;#x3C;div id=&quot;forth&quot;&gt;&amp;#x3C;/div&gt;
+    
+    &amp;#x3C;/body&gt;
+
+    &amp;#x3C;style&gt;
+        body{
+            margin:0;
+        }
+
+        div {
+            width: 25px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        #one {
+            background-color: red;
+        }
+        #two {
+            background-color: green;
+        }
+        #three {
+            background-color: blue;
+        }
+        #forth {
+            background-color: yellow;
+        }
+    &amp;#x3C;/style&gt;
+&amp;#x3C;/html&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;軽くコードの解説をしておくと、&lt;br&gt;
+初めにviewportを100に指定。viewportはcssピクセルを意味するので、それぞれのdivタグを25pxずつに設定しておけば、綺麗に4分割してくれるというわけです。&lt;br&gt;
+&lt;code&gt;inline-block&lt;/code&gt;を指定しているのは、&lt;code&gt;div&lt;/code&gt;タグデフォルトの&lt;code&gt;block&lt;/code&gt;要素だと改行されてしまうから。&lt;br&gt;
+&lt;code&gt;height&lt;/code&gt;を指定しているのは中に何も書かない要素を作成しているので、そのままだと高さが0になってしまい表示されないから。&lt;br&gt;
+ちなみに、&lt;code&gt;div&lt;/code&gt;タグ毎に改行して4行で書くと、それぞれの&lt;code&gt;div&lt;/code&gt;タグの間にスペースが生まれて綺麗に分割されなくなるので注意しましょう。&lt;/p&gt;
+&lt;p&gt;結果は&lt;br&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 200px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/08d246db00d7dae4c698af6ab7c61f3d/772e8/test1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+UlEQVQoz62OTUoDQRQGX8/YOF5KjeAuCblEjpG40UUE8Uh6iEn3MhIXUXDpauh+Jf2jiImufFBQ0HTxCSJoJfloLsiN0CwFWbTISpCzO/JzM9C2Iftk8gAIMQqqkj0hOWhq0AgXNdhepeARcns4OJ1+Bg2q5kfw28LzGjR5YVOCpzUoA8aU4Hj820Jr0Uryy7lFri3d0mIXJ9iVYEf3WAF7PNB1JTibPQINMVpULVAQnEN9IfnTs2P94vA7h9t53GuP27zh1uC84r3S97DdvgMOVZ9Jnkg7v07563TP9cAHIQS0kjzGQNhDKc9agRhTLaBaSJ4Q/vk+AHMc439mjOiTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;やってみた結果1&quot;
+        title=&quot;やってみた結果1&quot;
+        src=&quot;/static/08d246db00d7dae4c698af6ab7c61f3d/772e8/test1.png&quot;
+        srcset=&quot;/static/08d246db00d7dae4c698af6ab7c61f3d/12f09/test1.png 148w,
+/static/08d246db00d7dae4c698af6ab7c61f3d/772e8/test1.png 200w&quot;
+        sizes=&quot;(max-width: 200px) 100vw, 200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+よし、オッケ。&lt;/p&gt;
+&lt;h2&gt;やってみる2&lt;/h2&gt;
+&lt;p&gt;jsを叩くことで確認してみる。&lt;br&gt;
+&lt;a href=&quot;https://developer.mozilla.org/ja/docs/Web/API/Window/innerWidth&quot;&gt;MDN&lt;/a&gt;によると、&lt;code&gt;window.innerWidth&lt;/code&gt;がviewportを参照してくれるらしい。(が、これだと想定している挙動とならなかったので、html要素の横幅、つまりコードとしては&lt;code&gt;document.documentElement.clientWidth&lt;/code&gt;も併用することにします)&lt;/p&gt;
+&lt;p&gt;とりあえず、4パターンでの検証結果。&lt;/p&gt;
+&lt;p&gt;1.viewport未指定 &amp;#x26;&amp;#x26; 横幅80px&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;#x3C;!DOCTYPE html&gt;
+&amp;#x3C;head&gt;
+    &amp;#x3C;!-- 何も書かない --&gt;
+&amp;#x3C;/head&gt;
+
+&amp;#x3C;/html&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;document.documentElement.clientWidth
+&gt;&gt;&gt; 980
+window.innerWidth
+&gt;&gt;&gt; 320
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.viewport未指定 &amp;#x26;&amp;#x26; 横幅1500px&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;#x3C;!DOCTYPE html&gt;
+&amp;#x3C;head&gt;
+    &amp;#x3C;!-- 何も書かない --&gt;
+&amp;#x3C;/head&gt;
+
+&amp;#x3C;/html&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;document.documentElement.clientWidth
+&gt;&gt;&gt; 1500
+window.innerWidth
+&gt;&gt;&gt; 1500
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3.viewportを100pxに指定 &amp;#x26;&amp;#x26; 横幅100px&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;#x3C;!DOCTYPE html&gt;
+&amp;#x3C;html&gt;
+    &amp;#x3C;head&gt;
+        &amp;#x3C;meta name=&quot;viewport&quot; content=&quot;width=100&quot;/&gt;
+    &amp;#x3C;/head&gt;    
+    &amp;#x3C;body&gt;
+    &amp;#x3C;/body&gt;
+&amp;#x3C;/html&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;window.innerWidth
+&gt;&gt;&gt; 100 
+document.documentElement.clientWidth
+&gt;&gt;&gt; 100
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4.viewportを100pxに指定 &amp;#x26;&amp;#x26; 横幅1500px&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;#x3C;!DOCTYPE html&gt;
+&amp;#x3C;html&gt;
+    &amp;#x3C;head&gt;
+        &amp;#x3C;meta name=&quot;viewport&quot; content=&quot;width=100&quot;/&gt;
+    &amp;#x3C;/head&gt;    
+    &amp;#x3C;body&gt;
+    &amp;#x3C;/body&gt;
+&amp;#x3C;/html&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;window.innerWidth
+&gt;&gt;&gt; 300 
+document.documentElement.clientWidth
+&gt;&gt;&gt; 300
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;うーん。ちょっと思った通りにならない。&lt;br&gt;
+この数字を全部完璧に説明することはできませんが、ある程度の説明はできるかもしれないヒントがMDNに書いてありました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ブラウザーは要求された縮尺で画面を埋めるために必要であればビューポートの幅を拡大させます。これは、特に大画面の端末で使用する場合に有用です。
+画面幅が 500 ピクセル以上ある場合、ブラウザーは画面に合わせるために（ズームインするのではなく）ビューポートを拡大します。
+この仮想ビューポートは、モバイル端末に最適化されていないサイト全般を、画面が狭い端末でも見やすくするための方法です。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;つまり、viewportは本来、モバイルなどの横幅が小さい端末での使用を想定しており、指定したviewport以上の横幅を持つメディアでは、(指定されたviewportでレンダリングしてズームインするのではなく)適切にviewportそのものを拡大して表示する。
+だから、viewport(default値が980)未指定の時は、横幅980px以下では980pxのviewportを確保してくれますが、980pxを超えると自動で拡大されて980よりも大きなviewportとなる。&lt;br&gt;
+同様に、viewportに100を指定した時は、横幅100px以下では100pxのviewportを確保してくれますが、100pxを超えると自動で拡大されて100より大きなviewportとなる。&lt;br&gt;
+ということなのでしょう。&lt;/p&gt;
+&lt;p&gt;うーん、それなら！&lt;/p&gt;
+&lt;h2&gt;やってみる3&lt;/h2&gt;
+&lt;p&gt;viewportが自動拡大された場合は、レイアウトはどうなるのか。&lt;br&gt;
+つまり、たとえばviewportを100pxに指定して、横幅1500pxで表示。すると、先ほどの実験の通り、viewportは自動拡大されて100pxより大きな値となる。&lt;br&gt;
+で、ここでたとえばcss&lt;code&gt;width=25px&lt;/code&gt;と指定していたものはちゃんと画面を4分割したサイズになるのか。それとも拡大されたviewportに従って、それより小さく表示されるのか。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;#x3C;!DOCTYPE html&gt;
+&amp;#x3C;html&gt;
+
+    &amp;#x3C;head&gt;
+        &amp;#x3C;meta name=&quot;viewport&quot; content=&quot;width=100&quot;/&gt;
+    &amp;#x3C;/head&gt;
+    
+    &amp;#x3C;body&gt;
+         &amp;#x3C;div id=&quot;one&quot;&gt;&amp;#x3C;/div&gt;&amp;#x3C;div id=&quot;two&quot;&gt;&amp;#x3C;/div&gt;&amp;#x3C;div id=&quot;three&quot;&gt;&amp;#x3C;/div&gt;&amp;#x3C;div id=&quot;forth&quot;&gt;&amp;#x3C;/div&gt;
+    
+    &amp;#x3C;/body&gt;
+
+    &amp;#x3C;style&gt;
+        body{
+            margin:0;
+        }
+
+        div {
+            width: 25px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        #one {
+            background-color: red;
+        }
+        #two {
+            background-color: green;
+        }
+        #three {
+            background-color: blue;
+        }
+        #forth {
+            background-color: yellow;
+        }
+    &amp;#x3C;/style&gt;
+&amp;#x3C;/html&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;結果：&lt;br&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c35465a8cb9a4c5ba84e8600630ed58c/0b533/test3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABeklEQVQoz62PP2/TQByGT4Jv0KESMz7/C0lsx3ECYkACKSFWWhgq7Lq04s8HYIClC0OHio9ADEWgqu3OTCc7mTow8jVgKb74QXEDogikgHil537vvad7TyekZiAv62hSx3F9HKeN77dpOi7NpsdgEBIEXXq9Pp1Ol1YrwPV8NM1AkyZSmmjyzOuGhZB1F9nq0HauE3g+QbeGXbuGbgQYZg3LbmBa9WrO0I2zzDCvYNnz3Kpj2w3qDRexvbTM8UXBpS2BuHGXC+ITB0fLnJxcJcs+kucZWZaT52PG40nlf57fmUwm3LzVQ+xHCew858WHJzw7fM/2U/j8ZRd4y99qOFxFvHy3/0v8tVqLApQqUEotzCAcItJRWhWcFqcUaooqoCwVoCjLmS8XYqa1tXuINH1dbWYvLHr5T4XDlTuIUfpq/sXin4qm0+kP378dIvb23vC/FIYriF5/QJLcJ4oT4t8QRQkPHz1mc+sBUbROHG+cP58Tr2/geW2+ASb/YbT+TyK+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;実験結果の写真&quot;
+        title=&quot;実験結果の写真&quot;
+        src=&quot;/static/c35465a8cb9a4c5ba84e8600630ed58c/0b533/test3.png&quot;
+        srcset=&quot;/static/c35465a8cb9a4c5ba84e8600630ed58c/12f09/test3.png 148w,
+/static/c35465a8cb9a4c5ba84e8600630ed58c/e4a3f/test3.png 295w,
+/static/c35465a8cb9a4c5ba84e8600630ed58c/0b533/test3.png 500w&quot;
+        sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;window.innerWidth
+&gt;&gt;&gt; 300 
+document.documentElement.clientWidth
+&gt;&gt;&gt; 300
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;うーん、これは拡大されたviewportでレンダリングされてますね。&lt;br&gt;
+4つ合わせてちょうど画面全体の1/3ほどのサイズ。&lt;br&gt;
+レンダリングまでは指定したviewport幅でしてくれてたらコードが書きやすいかなと思っていましたが、ダメみたいです。&lt;/p&gt;
+&lt;p&gt;ということで、指定したviewport幅以上のメディアで表示した場合には、拡大されたviewport幅でレンダリングが行われます。&lt;/p&gt;
+&lt;h2&gt;やってみる4　&lt;/h2&gt;
+&lt;p&gt;今度は指定するviewportの最大値と最小値を探ってみる。&lt;br&gt;
+それこそ仕様書を読めと言われる気がしなくもないですが、まあ実験に勝る証拠はないでしょうの精神でやっていきます。&lt;/p&gt;
+&lt;p&gt;これに関しては簡単で、viewportに極端な値を指定してみます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;viewportに100000を指定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;window.innerWidth
+&gt;&gt;&gt; 276
+document.documentElement.clientWidth
+&gt;&gt;&gt; 10000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;どうやら、上限値は10000っぽい……？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;viewportに10001を指定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;window.innerWidth
+&gt;&gt;&gt; 276
+document.documentElement.clientWidth
+&gt;&gt;&gt; 10000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;うん、おそらく10000ですね。&lt;br&gt;
+そして、やはり&lt;code&gt;window.innerWidth&lt;/code&gt;はviewportの指定とはあまり関係がなさそうですね。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;viewportに1を指定。 &amp;#x26;&amp;#x26; 横幅1pxで表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下限値を探る際は、横幅が大きいとviewportも自動拡大されてしまうので、注意しなくてはいけません。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;window.innerWidth
+&gt;&gt;&gt; 1 
+document.documentElement.clientWidth
+&gt;&gt;&gt; 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;おー。下限値は特になさそう。&lt;/p&gt;
+&lt;h2&gt;viewportの指定をしないとメディアクエリが効かないのはなんで？&lt;/h2&gt;
+&lt;p&gt;数ヶ月前の私が出会った、
+&lt;code&gt;&amp;#x3C;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;/&gt;&lt;/code&gt;
+を書かないと、cssのメディアクエリが効かない現象。&lt;br&gt;
+ここまで読んでくださってる聡明な読者の皆様(言いたかった)はお分かりかと思いますが、viewportのデフォルト値は980です。&lt;br&gt;
+だから、パソコンだろうがスマホだろうが、横幅1pxのメディアだろうが、viewportの指定をしない場合は横幅980として扱われます。&lt;br&gt;
+だからメディアクエリで横幅を取得して分岐を書いても、横幅には常に980が入ってくるため、分岐が使われることはありません。
+以上。&lt;/p&gt;
+&lt;h2&gt;最後に&lt;/h2&gt;
+&lt;p&gt;ここまで駄文・長文にお付き合いいただきありがとうございました。&lt;br&gt;
+記事を書くことで今までなんとなくで使っていたviewportに関する知識が整理された気がします。
+それでは！&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JPHacks2022でHUAWEI賞を受賞した話]]></title><description><![CDATA[初めに 今回、ありがたいことにJPHacks202…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/jphacks2022/</guid><pubDate>Tue, 15 Nov 2022 13:12:03 GMT</pubDate><content:encoded>&lt;h2&gt;初めに&lt;/h2&gt;
 &lt;p&gt;今回、ありがたいことにJPHacks2022にて本選に出場させていただけたので、その感想を残しておきたいと思います。&lt;br&gt;
 前回の技育展とは違うメンバーですが、再び同じサークルでチームを結成して出場しました。&lt;br&gt;
 (本当は技術ブログのつもりで開設したのに、アウトプット苦手すぎて体験談しか書けてない……。)&lt;br&gt;
