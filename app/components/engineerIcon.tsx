@@ -4,7 +4,7 @@ export const links: LinksFunction = () => {
   return [
     {
       rel: "stylesheet",
-      href: "app/components/engineer.css",
+      href: "app/components/engineerIcon.css",
     },
   ];
 };
