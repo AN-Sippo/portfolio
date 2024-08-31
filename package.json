@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "remix vite:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remix-run/node": "^2.11.2",
+    "@remix-run/react": "^2.11.2",
+    "@remix-run/serve": "^2.11.2",
+    "isbot": "4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.11.2",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "vite": "^5.4.2",
+    "vite-tsconfig-paths": "^5.0.1"
+  }
+}
