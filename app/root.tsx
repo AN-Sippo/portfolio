@@ -1,4 +1,13 @@
+import { LinksFunction } from "@remix-run/node";
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: "app/root.css",
+    },
+  ];
+};
 
 export default function App() {
   return (
@@ -9,8 +18,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <h1>Hello world!</h1>
-        <Outlet />
+        <div id="page-container">
+          <h1>Hello world!</h1>
+          <Outlet />
+        </div>
 
         <Scripts />
       </body>
