@@ -90,3 +90,36 @@
 #aboutme content {
   margin-top: 8px;
 }
+
+.workcard {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  & + & {
+    margin-top: 24px;
+  }
+}
+
+.workcard .workcard-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.workcard p {
+  margin: 4px;
+}
+
+.workcard .workicon {
+  width: 128px;
+  height: 128px;
+}
+
+.workcard h4 {
+  margin: 0px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.workcard p {
+  white-space: pre;
+}

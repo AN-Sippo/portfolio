@@ -1,13 +1,11 @@
 import type { LinksFunction } from "@remix-run/node";
 import { IconName, Icons, links as iconLinks } from "~/components/Icons/icons";
-import {
-  ArrowDownIcon,
-  links as iconsLinks,
-} from "~/components/Icons/arrowDown";
+import { ReactDOM, ReactElement } from "react";
+import { Work, works } from "~/contents/works";
+import { IconButton } from "~/components/iconButtons/iconButtons";
 
 export const links: LinksFunction = () => [
   ...iconLinks(),
-  ...iconsLinks(),
   {
     rel: "stylesheet",
     href: "app/routes/_index.css",
@@ -20,10 +18,47 @@ export default function Home() {
       <Landing />
       <AboutMe />
       <Skills />
+      <Works />
     </main>
   );
 }
 
+const Works = () => {
+  return (
+    <section className="section" id="works">
+      <h2>Works</h2>
+      <ul>
+        {works.map((work) => (
+          <WorkCard {...work} />
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+const WorkCard = ({
+  title,
+  name,
+  productUrl,
+  sourceCodeUrl,
+  description,
+}: Work) => {
+  return (
+    <li className="workcard">
+      <IconButton name={name} href={productUrl} className="workicon" />
+      <div>
+        <a href={productUrl}>
+          <h4>{title}</h4>
+        </a>
+        <div className="workcard-links">
+          {sourceCodeUrl ? <Icons name="code" size="24px" /> : <></>}
+          {productUrl ? <Icons name="outside" size="24px" /> : <></>}
+        </div>
+        <p>{description}</p>
+      </div>
+    </li>
+  );
+};
 const Landing = () => {
   return (
     <section id="landing">
@@ -32,7 +67,7 @@ const Landing = () => {
         <span>Hi,I'm Sippo. </span>
         <span>Thank you for visiting!!!</span>
       </h1>
-      <ArrowDownIcon className="landing-icon" />
+      <IconButton name="arrowDown" className="landing-icon" href="#aboutme" />
     </section>
   );
 };
