@@ -9,19 +9,22 @@ export const links: LinksFunction = () => {
   ];
 };
 
-type Props = {
+export type Props = {
   name: IconName;
   size?: string;
   circle?: boolean;
+  className?: string;
 };
 
-export const Icons = ({ name, size, circle }: Props) => {
+export const Icons = ({ name, size, circle, className }: Props) => {
   return (
     <img
       alt="icon"
       src={IconMaps[name]}
       style={size ? { width: size, height: size } : {}}
-      className={`icons-default icons-w64 ${circle ? "icons-circle" : ""}`}
+      className={`icons-default icons-w64 ${
+        circle ? "icons-circle" : ""
+      } ${className}`}
     />
   );
 };
@@ -48,6 +51,10 @@ const IconMaps = {
   qiita: "app/routes/assets/img/skill_icons/qiita.png",
   twitter: "app/routes/assets/img/skill_icons/twitter.png",
   github: "app/routes/assets/img/skill_icons/github.svg",
+  arrowDown: "app/routes/assets/img/common/arrow_down.svg",
+  code: "app/routes/assets/img/common/code.svg",
+  outside: "app/routes/assets/img/common/outside.svg",
+  lifeStatistics: "app/routes/assets/img/works/life-statistics.jpg",
 };
 
 export type IconName = keyof typeof IconMaps;
