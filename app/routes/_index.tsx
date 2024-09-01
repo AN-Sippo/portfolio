@@ -1,6 +1,5 @@
 import type { LinksFunction } from "@remix-run/node";
-import { EngineerIcon, links as iconLinks } from "~/components/engineerIcon";
-import { IconName, SkillIcon } from "~/components/Icons/skillIcons";
+import { IconName, Icons, links as iconLinks } from "~/components/Icons/icons";
 import {
   ArrowDownIcon,
   links as iconsLinks,
@@ -19,6 +18,7 @@ export default function Home() {
   return (
     <main>
       <Landing />
+      <AboutMe />
       <Skills />
     </main>
   );
@@ -27,13 +27,52 @@ export default function Home() {
 const Landing = () => {
   return (
     <section id="landing">
-      <EngineerIcon />
+      <Icons circle name="Sippo" />
       <h1>
         <span>Hi,I'm Sippo. </span>
         <span>Thank you for visiting!!!</span>
       </h1>
       <ArrowDownIcon className="landing-icon" />
     </section>
+  );
+};
+
+const AboutMe = () => {
+  return (
+    <section className="section" id="aboutme">
+      <h2>About me</h2>
+      <div id="aboutme-name-icon">
+        <Icons circle name="Sippo" size="150px" />
+        <div id="aboutme-name-others">
+          <h4>Sippo</h4>
+          <OtherMediaIcons />
+        </div>
+      </div>
+      <div id="aboutme-content">
+        <p>Sippoは北海道在住の放課後エンジニア。普段は限界医学生をしている。</p>
+        <p>
+          主にフロントエンドを得意としているが、興味の幅は広くサーバーサードやFlutterを用いたモバイルアプリ開発なども行う。他にも色々文章。他にも色々文章。
+        </p>
+        <p>
+          他にも色々文章。 他にも色々文章。 他にも色々文章。 他にも色々文章。
+          他にも色々文章。 他にも色々文章。 他にも色々文章。 他にも色々文章。
+          他にも色々文章。
+        </p>
+      </div>
+    </section>
+  );
+};
+
+const OtherMediaIcons = () => {
+  const icons: Array<IconName> = ["github", "twitter", "qiita"];
+  return (
+    <ul id="other-media-icons">
+      {icons.map((icon) => (
+        <li key={icon}>
+          <Icons name={icon} size="32px" />
+        </li>
+      ))}
+    </ul>
   );
 };
 
@@ -58,6 +97,7 @@ const Skills = () => {
           "oauth",
           "flutter",
           "dart",
+          "github",
         ]}
       />
       <SkillSection title="経験あり" skills={["docker"]} />
@@ -69,8 +109,8 @@ const SkillsGrid = ({ skills }: { skills: Array<IconName> }) => {
   return (
     <ul className="skills-grid">
       {skills.map((skillName) => (
-        <li className="skill-item">
-          <SkillIcon name={skillName} />
+        <li className="skill-item" key={skillName}>
+          <Icons name={skillName} />
         </li>
       ))}
     </ul>

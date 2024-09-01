@@ -21,6 +21,7 @@
 }
 
 .skills-grid {
+  margin: 0px;
   display: grid;
   grid-template-columns: repeat(13, 64px);
   gap: 8px;
@@ -29,18 +30,63 @@
 .skill-item {
   list-style: none;
 }
+.skill-section {
+  & + & {
+    margin-top: 18px;
+  }
+}
 
 .skill-section h3 {
   font-size: 24px;
   font-weight: 700;
+  margin: 0px;
 }
 
-#skills h2 {
+.section h2 {
   width: fit-content;
   margin: auto;
   font-size: 32px;
 }
 
 .section {
+  padding: 0px 16px;
   margin-top: 64px;
+}
+
+#aboutme-name-icon {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+#aboutme h4 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0px;
+  margin-bottom: 12px;
+}
+
+#other-media-icons {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  gap: 8px;
+}
+
+#other-media-icons li {
+  list-style: none;
+}
+
+#aboutme #aboutme-name-others {
+  height: fit-content;
+}
+
+#aboutme p {
+  margin: 8px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+#aboutme content {
+  margin-top: 8px;
 }
