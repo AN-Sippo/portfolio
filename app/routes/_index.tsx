@@ -8,7 +8,13 @@ export const links: LinksFunction = () => [
   ...iconLinks(),
   {
     rel: "stylesheet",
-    href: "app/routes/_index.css",
+    href: "app/routes/_index.desktop.css",
+    media: "(min-width:1024px)",
+  },
+  {
+    rel: "stylesheet",
+    href: "app/routes/_index.mobile.css",
+    media: "(max-width:1023px)",
   },
 ];
 
@@ -45,17 +51,27 @@ const WorkCard = ({
 }: Work) => {
   return (
     <li className="workcard">
-      <IconButton name={name} href={productUrl} className="workicon" />
-      <div>
-        <a href={productUrl}>
-          <h4>{title}</h4>
-        </a>
-        <div className="workcard-links">
-          {sourceCodeUrl ? <Icons name="code" size="24px" /> : <></>}
-          {productUrl ? <Icons name="outside" size="24px" /> : <></>}
+      <div className="workcard-main">
+        <IconButton name={name} href={productUrl} className="workicon" />
+        <div>
+          <a href={productUrl}>
+            <h4>{title}</h4>
+          </a>
+          <div className="workcard-links">
+            {sourceCodeUrl ? (
+              <IconButton name="code" size="19px" href={sourceCodeUrl} />
+            ) : (
+              <></>
+            )}
+            {productUrl ? (
+              <IconButton name="outside" size="24px" href={productUrl} />
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
-        <p>{description}</p>
       </div>
+      <p>{description}</p>
     </li>
   );
 };
@@ -77,7 +93,7 @@ const AboutMe = () => {
     <section className="section" id="aboutme">
       <h2>About me</h2>
       <div id="aboutme-name-icon">
-        <Icons circle name="Sippo" size="150px" />
+        <Icons circle name="Sippo" className="aboutme-sippo-icon" />
         <div id="aboutme-name-others">
           <h4>Sippo</h4>
           <OtherMediaIcons />
@@ -145,7 +161,7 @@ const SkillsGrid = ({ skills }: { skills: Array<IconName> }) => {
     <ul className="skills-grid">
       {skills.map((skillName) => (
         <li className="skill-item" key={skillName}>
-          <Icons name={skillName} />
+          <Icons name={skillName} className="skillicon" />
         </li>
       ))}
     </ul>

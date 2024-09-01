@@ -1,8 +1,13 @@
+main {
+  margin: 0px;
+}
+
 #landing {
   background-color: #ffea7d;
   padding: 32px;
   height: 600px;
   position: relative;
+  margin: auto;
 }
 
 #landing h1 {
@@ -80,7 +85,10 @@
 #aboutme #aboutme-name-others {
   height: fit-content;
 }
-
+#aboutme #aboutme-sippo-icon {
+  width: 150px;
+  height: 150px;
+}
 #aboutme p {
   margin: 8px;
   font-weight: 400;
@@ -92,18 +100,24 @@
 }
 
 .workcard {
-  display: flex;
-  gap: 32px;
-  align-items: center;
   & + & {
     margin-top: 24px;
   }
+  list-style: none;
 }
 
+.workcard .workcard-main {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 8px;
+}
 .workcard .workcard-links {
+  margin-top: 12px;
   display: flex;
   gap: 8px;
   list-style: none;
+  align-items: center;
 }
 
 .workcard p {
@@ -121,5 +135,5 @@
   font-size: 24px;
 }
 .workcard p {
-  white-space: pre;
+  white-space: pre-wrap;
 }

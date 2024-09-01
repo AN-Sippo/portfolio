@@ -55,6 +55,7 @@ const IconMaps = {
   code: "app/routes/assets/img/common/code.svg",
   outside: "app/routes/assets/img/common/outside.svg",
   lifeStatistics: "app/routes/assets/img/works/life-statistics.jpg",
+  contore: "app/routes/assets/img/works/contore.png",
 };
 
 export type IconName = keyof typeof IconMaps;
