@@ -45,8 +45,8 @@ const IconMaps = {
   nextjs: "app/routes/assets/img/skill_icons/nextjs.svg",
   dart: "app/routes/assets/img/skill_icons/dart.svg",
   oauth: "app/routes/assets/img/skill_icons/oauth.svg",
-  qiita: "app/routes/assets/img/skill_icons/qiita.svg",
-  twitter: "app/routes/assets/img/skill_icons/twitter.svg",
+  qiita: "app/routes/assets/img/skill_icons/qiita.png",
+  twitter: "app/routes/assets/img/skill_icons/twitter.png",
   github: "app/routes/assets/img/skill_icons/github.svg",
 };
 
