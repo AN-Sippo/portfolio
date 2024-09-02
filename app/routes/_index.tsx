@@ -3,6 +3,7 @@ import { IconName, Icons, links as iconLinks } from "~/components/Icons/icons";
 import { ReactDOM, ReactElement } from "react";
 import { Work, works } from "~/contents/works";
 import { IconButton } from "~/components/iconButtons/iconButtons";
+import { mediaIconDataArray } from "~/contents/medias";
 
 export const links: LinksFunction = () => [
   ...iconLinks(),
@@ -115,12 +116,11 @@ const AboutMe = () => {
 };
 
 const OtherMediaIcons = () => {
-  const icons: Array<IconName> = ["github", "twitter", "qiita"];
   return (
     <ul id="other-media-icons">
-      {icons.map((icon) => (
-        <li key={icon}>
-          <Icons name={icon} size="32px" />
+      {mediaIconDataArray.map((icon) => (
+        <li key={icon.name}>
+          <IconButton name={icon.name} size="32px" href={icon.href} />
         </li>
       ))}
     </ul>
