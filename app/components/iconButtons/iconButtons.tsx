@@ -1,4 +1,4 @@
-import { LinksFunction } from "@remix-run/node";
+import { LinksFunction } from "@remix-run/cloudflare";
 import {
   Icons,
   type Props as IconProps,

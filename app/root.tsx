@@ -1,4 +1,4 @@
-import { LinksFunction } from "@remix-run/node";
+import { LinksFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
 export const links: LinksFunction = () => {
   return [
