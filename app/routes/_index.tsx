@@ -1,6 +1,5 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/cloudflare";
 import { IconName, Icons, links as iconLinks } from "~/components/Icons/icons";
-import { ReactDOM, ReactElement } from "react";
 import { Work, works } from "~/contents/works";
 import { IconButton } from "~/components/iconButtons/iconButtons";
 import { mediaIconDataArray } from "~/contents/medias";
@@ -9,12 +8,12 @@ export const links: LinksFunction = () => [
   ...iconLinks(),
   {
     rel: "stylesheet",
-    href: "app/routes/_index.desktop.css",
+    href: "app/routes/assets/css/_index.desktop.css",
     media: "(min-width:1024px)",
   },
   {
     rel: "stylesheet",
-    href: "app/routes/_index.mobile.css",
+    href: "app/routes/assets/css/_index.mobile.css",
     media: "(max-width:1023px)",
   },
 ];
