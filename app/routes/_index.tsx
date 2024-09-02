@@ -8,12 +8,12 @@ export const links: LinksFunction = () => [
   ...iconLinks(),
   {
     rel: "stylesheet",
-    href: "public/assets/css/_index.desktop.css",
+    href: "assets/css/_index.desktop.css",
     media: "(min-width:1024px)",
   },
   {
     rel: "stylesheet",
-    href: "public/assets/css/_index.mobile.css",
+    href: "assets/css/_index.mobile.css",
     media: "(max-width:1023px)",
   },
 ];
