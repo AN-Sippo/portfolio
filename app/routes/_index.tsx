@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { IconName, Icons, links as iconLinks } from "~/components/Icons/icons";
 import { Work, works } from "~/contents/works";
 import { IconButton } from "~/components/iconButtons/iconButtons";
@@ -16,7 +16,13 @@ export const links: LinksFunction = () => [
     href: "assets/css/_index.mobile.css",
     media: "(max-width:1023px)",
   },
+  {
+    rel: "icon",
+    href: "/assets/img/icon_engineer.png",
+  },
 ];
+
+export const meta: MetaFunction = () => [{ title: "Sippo's Home Page" }];
 
 export default function Home() {
   return (
