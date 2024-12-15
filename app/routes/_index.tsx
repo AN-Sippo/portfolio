@@ -70,7 +70,7 @@ const ArticleCard = ({ article }: { article: SerializeFrom<Article> }) => {
     <li className="article-card" key={article.title}>
       <Link to={article.href} target="_blank">
         <div className="article-container">
-          <Icons name="Css" />
+          <img src={article.eyecatchUrl} />
           <div className="article-content">
             <h4>{article.title}</h4>
             <DateDisplay date={new Date(Date.parse(article.date))} />

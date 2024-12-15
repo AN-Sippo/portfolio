@@ -155,6 +155,7 @@ main {
 }
 #blog ul {
   width: fit-content;
+  padding: 0px;
   margin: auto;
 }
 
@@ -165,8 +166,8 @@ main {
 }
 
 .article-card img {
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
 }
 .article-card a {
   text-decoration: black;
@@ -180,7 +181,7 @@ main {
   width: 100%;
   height: 100%;
   gap: 16px;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
