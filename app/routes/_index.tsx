@@ -1,11 +1,20 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
+import {
+  json,
+  SerializeFrom,
+  type LinksFunction,
+  type MetaFunction,
+} from "@remix-run/cloudflare";
 import { IconName, Icons, links as iconLinks } from "~/components/Icons/icons";
 import { Work, works } from "~/contents/works";
 import { IconButton } from "~/components/iconButtons/iconButtons";
 import { mediaIconDataArray } from "~/contents/medias";
+import { Article, loadRecentArticles } from "~/utils/blog/blog";
+import { Link, useLoaderData } from "@remix-run/react";
+import { DateDisplay, links as dateLinks } from "~/components/Date/Date";
 
 export const links: LinksFunction = () => [
   ...iconLinks(),
+  ...dateLinks(),
   {
     rel: "stylesheet",
     href: "assets/css/_index.desktop.css",
@@ -24,6 +33,11 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => [{ title: "Sippo's Home Page" }];
 
+export const loader = async () => {
+  const articles = loadRecentArticles(10);
+  return json({ articles });
+};
+
 export default function Home() {
   return (
     <main>
@@ -31,9 +45,42 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Works />
+      <Blog />
     </main>
   );
 }
+
+const Blog = () => {
+  const { articles } = useLoaderData<typeof loader>();
+
+  return (
+    <section className="section" id="blog">
+      <h2>Blog</h2>
+      <ul>
+        {articles.map((article) => (
+          <ArticleCard article={article} key={article.title} />
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+const ArticleCard = ({ article }: { article: SerializeFrom<Article> }) => {
+  return (
+    <li className="article-card" key={article.title}>
+      <Link to={article.href} target="_blank">
+        <div className="article-container">
+          <Icons name="Css" />
+          <div className="article-content">
+            <h4>{article.title}</h4>
+            <DateDisplay date={new Date(Date.parse(article.date))} />
+            <p>{article.description}</p>
+          </div>
+        </div>
+      </Link>
+    </li>
+  );
+};
 
 const Works = () => {
   return (
@@ -41,7 +88,7 @@ const Works = () => {
       <h2>Works</h2>
       <ul>
         {works.map((work) => (
-          <WorkCard {...work} />
+          <WorkCard {...work} key={work.name} />
         ))}
       </ul>
     </section>
@@ -56,7 +103,7 @@ const WorkCard = ({
   description,
 }: Work) => {
   return (
-    <li className="workcard">
+    <li className="workcard" key={title}>
       <div className="workcard-main">
         <IconButton name={name} href={productUrl} className="workicon" />
         <div>

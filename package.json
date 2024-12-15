@@ -17,14 +17,17 @@
     "@remix-run/cloudflare-pages": "^2.11.2",
     "@remix-run/react": "^2.11.2",
     "isbot": "4",
+    "js-yaml": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240512.0",
     "@remix-run/dev": "^2.11.2",
+    "@types/js-yaml": "^4.0.9",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "deno": "^2.1.4",
     "typescript": "^5.1.6",
     "vite": "^5.4.2",
     "vite-tsconfig-paths": "^5.0.1",

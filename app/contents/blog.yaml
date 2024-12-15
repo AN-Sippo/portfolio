@@ -1,0 +1,15 @@
+articles:
+  - title: e2eテスト上でアプリ連携をするようにしたぞ1
+    date: 2024-12-10
+    description: gitlabのワークフローから起動するe2eテストに新しいサービスを追加してテストの網羅性を高め、実際に運用できるようにしました1。
+    href: "https://qiita.com/Sippo/items/631b13b8b22ae98e4a33"
+    eyecatchUrl: "/assets/img/skill_icons/css.svg"
+  - title: e2eテスト上でアプリ連携をするようにしたぞ2
+    date: 2024-12-10
+    description: gitlabのワークフローから起動するe2eテストに新しいサービスを追加してテストの網羅性を高め、実際に運用できるようにしました2。
+    href: "https://qiita.com/Sippo/items/631b13b8b22ae98e4a33"
+    eyecatchUrl: "/assets/img/skill_icons/css.svg"
+  - title: e2eテスト上でアプリ連携をするようにしたぞ3
+    date: 2024-12-10
+    description: gitlabのワークフローから起動するe2eテストに新しいサービスを追加してテストの網羅性を高め、実際に運用できるようにしました3。
+    eyecatchUrl: "/assets/img/skill_icons/css.svg"
