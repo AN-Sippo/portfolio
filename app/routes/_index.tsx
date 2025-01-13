@@ -1,6 +1,5 @@
 import {
   json,
-  SerializeFrom,
   type LinksFunction,
   type MetaFunction,
 } from "@remix-run/cloudflare";
@@ -8,18 +7,13 @@ import { IconName, Icons, links as iconLinks } from "~/components/Icons/icons";
 import { Work, works } from "~/contents/works";
 import { IconButton } from "~/components/iconButtons/iconButtons";
 import { mediaIconDataArray } from "~/contents/medias";
-import { Article, loadRecentArticles } from "~/utils/blog/blog";
-import { Link, useLoaderData } from "@remix-run/react";
-import { DateDisplay, links as dateLinks } from "~/components/Date/Date";
-import {
-  ViewMoreButton,
-  links as viewMoreButtonLinks,
-} from "~/components/Viewmore/ViewMoreButton";
+import { loadRecentArticles } from "~/utils/blog/blog";
+import { useLoaderData } from "@remix-run/react";
+import { Blog, links as blogLinks } from "~/components/Home/blog";
 
 export const links: LinksFunction = () => [
   ...iconLinks(),
-  ...dateLinks(),
-  ...viewMoreButtonLinks(),
+  ...blogLinks(),
   {
     rel: "stylesheet",
     href: "assets/css/_index.desktop.css",
@@ -44,51 +38,17 @@ export const loader = async () => {
 };
 
 export default function Home() {
+  const { articles } = useLoaderData<typeof loader>();
   return (
     <main>
       <Landing />
       <AboutMe />
       <Skills />
       <Works />
-      <Blog />
+      <Blog articles={articles} />
     </main>
   );
 }
-
-const Blog = () => {
-  const { articles } = useLoaderData<typeof loader>();
-
-  return (
-    <section className="section" id="blog">
-      <h2>Blog</h2>
-      <ul>
-        {articles.map((article) => (
-          <ArticleCard article={article} key={article.title} />
-        ))}
-      </ul>
-      <div className="view-more-button-container">
-        <ViewMoreButton />
-      </div>
-    </section>
-  );
-};
-
-const ArticleCard = ({ article }: { article: SerializeFrom<Article> }) => {
-  return (
-    <li className="article-card" key={article.title}>
-      <Link to={article.href} target="_blank">
-        <div className="article-container">
-          <img src={article.eyecatchUrl} />
-          <div className="article-content">
-            <h4>{article.title}</h4>
-            <DateDisplay date={new Date(Date.parse(article.date))} />
-            <p>{article.description}</p>
-          </div>
-        </div>
-      </Link>
-    </li>
-  );
-};
 
 const Works = () => {
   return (

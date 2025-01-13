@@ -17,9 +17,10 @@ const typedLoad = <T = ReturnType<typeof load>>(
   ...args: Parameters<typeof load>
 ): T => load(...args) as T;
 
-export const loadRecentArticles = (num: number) => {
+export const loadRecentArticles = (num?: number) => {
   const doc = typedLoad<Articles>(
     readFileSync("app/contents/blog.yaml", "utf-8")
   );
-  return doc.articles.slice(0, num);
+
+  return num ? doc.articles.slice(0, num) : doc.articles;
 };

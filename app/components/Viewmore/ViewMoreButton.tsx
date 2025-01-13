@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Icons } from "../Icons/icons";
 import { LinksFunction } from "@remix-run/cloudflare";
+import { Link } from "@remix-run/react";
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
@@ -8,15 +9,17 @@ export const links: LinksFunction = () => [
   },
 ];
 
-type Props = React.AnchorHTMLAttributes<HTMLAnchorElement>;
+type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
+};
 
 export const ViewMoreButton = ({ href, ...props }: Props) => {
   return (
-    <a href={href} {...props} className="view-more-anchor">
+    <Link to={href} {...props} className="view-more-anchor">
       <div>
         <h4>View More</h4>
         <Icons name="arrowRight" size="14px" />
       </div>
-    </a>
+    </Link>
   );
 };
