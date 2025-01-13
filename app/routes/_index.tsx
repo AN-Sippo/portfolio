@@ -18,12 +18,12 @@ export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
     href: "assets/css/_index.desktop.css",
-    media: "(min-width:1024px)",
+    media: "(min-width:800px)",
   },
   {
     rel: "stylesheet",
     href: "assets/css/_index.mobile.css",
-    media: "(max-width:1023px)",
+    media: "(max-width:799px)",
   },
   {
     rel: "icon",

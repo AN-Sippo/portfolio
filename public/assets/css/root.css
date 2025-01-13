@@ -2,7 +2,12 @@ body {
   margin: 8px;
 }
 #page-container {
-  max-width: 1200px;
   margin: auto;
   margin-bottom: 128px;
+}
+
+:root {
+  --black: rbg(230 230 230);
+  --black-fade: rgb(0 0 0 / 0.05);
+  --black-fade-active: rgb(0 0 0 / 0.1);
 }
