@@ -157,6 +157,12 @@ main {
   margin: auto;
 }
 
+#blog .view-more-button-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .article-card {
   list-style: none;
   height: 220px;

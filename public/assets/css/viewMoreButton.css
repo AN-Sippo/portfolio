@@ -1,0 +1,25 @@
+.view-more-anchor {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 14px;
+}
+
+.view-more-anchor:hover {
+  cursor: pointer;
+}
+
+.view-more-anchor div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  gap: 12px;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--black);
+  border-bottom-style: solid;
+  padding: 8px 0px;
+}
+
+.view-more-anchor h4 {
+  margin: 0px;
+}

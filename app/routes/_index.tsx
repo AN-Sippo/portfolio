@@ -11,10 +11,15 @@ import { mediaIconDataArray } from "~/contents/medias";
 import { Article, loadRecentArticles } from "~/utils/blog/blog";
 import { Link, useLoaderData } from "@remix-run/react";
 import { DateDisplay, links as dateLinks } from "~/components/Date/Date";
+import {
+  ViewMoreButton,
+  links as viewMoreButtonLinks,
+} from "~/components/Viewmore/ViewMoreButton";
 
 export const links: LinksFunction = () => [
   ...iconLinks(),
   ...dateLinks(),
+  ...viewMoreButtonLinks(),
   {
     rel: "stylesheet",
     href: "assets/css/_index.desktop.css",
@@ -61,6 +66,9 @@ const Blog = () => {
           <ArticleCard article={article} key={article.title} />
         ))}
       </ul>
+      <div className="view-more-button-container">
+        <ViewMoreButton />
+      </div>
     </section>
   );
 };
