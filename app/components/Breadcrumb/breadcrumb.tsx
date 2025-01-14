@@ -5,7 +5,7 @@ import { Fragment } from "react/jsx-runtime";
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
-    href: "public/assets/css/components/breadCrumbs.css",
+    href: "/assets/css/components/breadCrumbs.css",
   },
 ];
 

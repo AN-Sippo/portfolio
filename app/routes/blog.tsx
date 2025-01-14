@@ -10,7 +10,7 @@ import {
 export const links = () => [
   ...blogLinks(),
   ...breadCrumbsLinks(),
-  { rel: "stylesheet", href: "public/assets/css/routes/blog.css" },
+  { rel: "stylesheet", href: "/assets/css/routes/blog.css" },
 ];
 
 export const loader = async () => {
