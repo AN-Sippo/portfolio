@@ -1,5 +1,5 @@
 import { load } from "js-yaml";
-import { readFileSync } from "fs";
+import { readFileSync } from "node:fs";
 
 export type Article = {
   title: string;
