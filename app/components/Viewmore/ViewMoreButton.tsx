@@ -5,7 +5,7 @@ import { Link } from "@remix-run/react";
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
-    href: "public/assets/css/viewMoreButton.css",
+    href: "assets/css/viewMoreButton.css",
   },
 ];
 
