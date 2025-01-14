@@ -1,4 +1,9 @@
 articles:
+  - title: 応用情報技術者試験に合格した私の勉強法
+    date: 2024-12-29
+    description: 応用情報技術者試験に無事合格したので、備忘録として勉強法を残しておきます。
+    eyecatchUrl: /assets/img/skill_icons/qiita.png
+    href: https://qiita.com/Sippo/items/8a4f6847b5818e8e4ad8
   - title: データを組み合わせて解析できるiosアプリを作った話
     date: 2024-12-15
     description: Flutter製のiosアプリを無事リリースすることができたので、記録として記事を書いてみました。
