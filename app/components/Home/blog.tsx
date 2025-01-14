@@ -1,5 +1,5 @@
 import { SerializeFrom } from "@remix-run/cloudflare";
-import { Article } from "~/utils/blog/blog";
+import { Article } from "~/contents/blog";
 import { Link } from "@remix-run/react";
 import { DateDisplay, links as dateLinks } from "~/components/Date/Date";
 import {
