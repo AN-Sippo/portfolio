@@ -10,6 +10,14 @@ export type Articles = Array<Article>;
 
 export const articles: Articles = [
   {
+    title: "mvコマンドは移動先が存在しないとリネームになるぞ",
+    description:
+      "ファイルの移動やろ？？という理解だけで挑み、ハマりかけたので、反省文です。",
+    date: new Date("2025-1-18"),
+    eyecatchUrl: "/assets/img/skill_icons/qiita.png",
+    href: "https://qiita.com/Sippo/items/99ff4cb0e9009cac3899",
+  },
+  {
     title: "応用情報技術者試験に合格した私の勉強法",
     date: new Date("2024-12-29"),
     description:
